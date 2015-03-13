@@ -20,7 +20,7 @@ permalink: /projects/
 
 [GitHub地址](https://github.com/liamchzh/bithelper)
 
-### 3. 「人在北理」网页 [http://atbit.org/](http://atbit.org/)
+### 3. 「人在北理」网页 [http://atbit.sinaapp.com/](http://atbit.sinaapp.com/)
 
 Tornado + Bootstrap + MySQL, 搭建在新浪SAE平台。
 

@@ -1,19 +1,13 @@
 ---
 layout: page
-title: About Pixyll
+title: About Me
 permalink: /about/
 ---
 
-This Jekyll theme was crafted with <3 by [John Otander](http://johnotander.com)
-([@4lpine](https://twitter.com/4lpine)).
+Who: 陈铮  
+E-mail: liamchzh#gmail.com  
+tags: Python, Vim, Git, 读书，编程，旅行，写作  
+Sports: 足球，长跑，游泳  
+Motto: 人生苦短，我用 Python.  
 
-Checkout the [Github repository](https://github.com/johnotander/pixyll) to download it,
-request a feature, report a bug, or contribute. It's free, and open source
-([MIT](http://opensource.org/licenses/MIT)).
-
-Thanks to the following:
-
-* [BASSCSS](http://basscss.com)
-* [Jekyll](http://jekyllrb.com)
-* [Refills](http://refills.bourbon.io/)
-* [Solarized](http://ethanschoonover.com/solarized)
+Know more about me: [微博](http://www.weibo.com/liamchzh) [知乎](http://www.zhihu.com/people/liamchzh) [GitHub](https://github.com/liamchzh) [豆瓣](http://www.douban.com/people/liamchzh/) [Twitter](https://twitter.com/liamchzh)

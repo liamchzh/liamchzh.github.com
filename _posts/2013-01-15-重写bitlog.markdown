@@ -1,0 +1,21 @@
+---
+date: 2013-01-15 08:55:30+00:00
+layout: post
+title: 重写BitLog
+categories:
+- Python
+description: "前两天花了点时间重新写了一下BitLog"
+---
+
+
+前两天花了点时间重新写了一下BitLog,一个外网登录客户端（For BIT）。
+
+前一个版本是用tkinter写的，是我第一个用python写的有界面的小玩意。当时写的时候对tkinter了解甚少，基本是一边学习一边开发，所以最后代码结构非常凌乱，当时为了达到目的，胡乱地使用「类」。至于界面的美观性更不用谈了。
+
+这个版本是用pygtk写的界面。也是一边学习一边开发，但是这次这个结构清晰多了，界面也更加简洁。
+
+本来还想打包成Windows下的可执行程序，不过今天花了大半天使用py2exe打包一直不成功。那就留着自己在ubuntu下用吧。
+
+代码已经托管到[github](https://github.com/liamchzh/python/blob/master/bitlog-v2.py).
+
+更多的关于BitLog请看[这里](http://liamchzh.com/%E5%85%B3%E4%BA%8Ebitlog/)。

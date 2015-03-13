@@ -1,0 +1,20 @@
+---
+date: 2012-06-26 11:26:01+00:00
+layout: post
+title: GTD方法
+categories: [Study]
+description: "GTD是“Getting Things Done”的缩写，这是一个被广泛采用的赋予实际行动的时间管理系统。"
+---
+
+GTD是“Getting Things Done”的缩写，这是一个被广泛采用的赋予实际行动的时间管理系统。  
+它的大概步骤是：收集任务——列出事项——具体化——开始行动。  
+它要求随身携带记录工具并把想法快速记录下来。不时地整理和回顾备忘，根据它来作为行动指导。  
+它的五条核心原则是：收集、处理、管理、执行、回顾。  
+
+关于GTD方法，[《入门GTD时间管理系统必读》](http://www.mifengtd.cn/articles/start-gtd.html)整理了不少资料和方法。  
+了解过什么是GTD后可以下载[《尽管去做——无压工作的艺术》](http://www.mifengtd.cn/articles/getting_things_done_cn_download.html)来看。
+
+最近我也在学着使用GTD方法来提高学习效率。GTD要求随时记录一切想法，过去，我用的是便签，现在，我用的是[Evernote](http://www.evernote.com)来记录我的想法和做笔记。  
+第一次知道Evernote是从一位学长的[博客](http://blog.jeoygin.org/)中得知的。一开只是当成备忘录来记录todo list，后来，我渐渐开始用它来记录读书笔记，或者网上看到的好文章也剪藏到里面去。  
+总之无论多么重要或者琐碎，只要我不想记住的，我都会扔到里面，让它帮我管理，这样就能让大脑腾出空间专注我要做的事情。不然，有些事情就会萦绕耳边，导致导致注意力无法集中。  
+如何使用好Evernote也是一门艺术，而我，还在摸索中。  

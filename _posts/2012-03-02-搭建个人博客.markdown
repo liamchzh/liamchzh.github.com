@@ -1,0 +1,41 @@
+---
+date: 2012-03-02 10:23:41+00:00
+layout: post
+title: 搭建个人博客
+categories: [Web]
+description: "互联网时代博客已经不是新鲜事物，而且国内的门户网站提供了很好的地方。但是想到以后要做一个程序员，我还是选择装一下B，搭建一个真正属于自己的博客。"
+---
+
+互联网时代博客已经不是新鲜事物，而且国内的门户网站提供了很好的地方。但是想到以后要做一个程序员，我还是选择装一下B，搭建一个真正属于自己的博客。
+
+平时看别人的博客看得很多，心里也痒痒的想自己弄一个。作为穷学生一个，所以没有钱买域名买空间，因此我使用的是0fees的免费空间+co.cc的免费域名+免费的WordPress。全部免费！
+
+先介绍一下[www.0fees.net](http://www.0fees.net/)这个网站，它能提供：300M的空间、每月10G的上传流量、使用PHP的MySQL数据库……还有一堆我不知道有什么的东西，不过我知道有这些就足够了！
+
+注册详情请看51CTO的《[一切免费，搭建自己的WordPress博客——免费空间申请](http://lance0215.blog.51cto.com/629043/313898/)》，需要注意的一点是Gmail会把激活的邮件当成垃圾邮件，如果没有收到注册邮件的话去垃圾找找。
+
+空间有了，还需要域名。.com或.net或.org这些域名后缀当然好，钱不是问题，问题是没钱，所以我们还是用免费的吧。[www.co.cc](http://www.co.cc/)这个可以注册以.co.cc为后缀的个性域名。其他的不多说，按照《[一切免费，搭建自己的WordPress博客——免费域名申请](http://lance0215.blog.51cto.com/629043/317352)》申请好域名并且把空间绑定到域名即可。
+
+有了空间和域名以后，距离拥有个人博客也不远了。接下来要做的就是把WordPress上传到空间。
+
+第一步：下载WordPress。打开[http://wordpress.org/](http://wordpress.org/)，把.zip包下载并解压。
+
+第二步：创建数据库。打开[http://cpanel.0fees.net](http://cpanel.0fees.net/)并登陆，进入MySQL数据库，创建一个新的数据库，创建好了可以看到数据库名称格式为 **fees0_用户名_数据库名.**
+
+第三步：设置wp-config.php.在解压的WordPress文件夹里找到wp-config-sample.php，打开然后找到
+
+    
+    // ** MySQL settings ** //
+    define('DB_NAME', 'wordpress');     // The name of the database
+    define('DB_USER', 'username');     // Your MySQL username
+    define('DB_PASSWORD', 'password'); // ...and password
+    define('DB_HOST', 'localhost');     // 99% chance you won't need to change this value
+
+
+DB_NAME（数据库名称）,DB_USER（MySQL账号）,DB_PASSWORD（登录密码）,DB_HOST（数据库主机），修改这四项后面的内容即可。账号和主机名可以在VistaPanel的控制面板左侧可以找到。修改完成后重命名为wp-config.php，这步是关键！
+
+0fees空间支持压缩包的解压，但是因为上传文件大小限制，所以还是建议使用ftp上传工具。我使用的是FileZilla,上传时需要填写主机、用户名、密码和端口，这些在VistaPanel的控制面板左侧也可以找到。然后把之前解压好的WordPress文件夹上传到htdocs中。**如果是整个文件夹一起上传的，记得上传完成后把文件夹中的全部内容，例如index.php、wp-config.php等，拖到htdocs中。**
+
+上传完成后打开浏览器，输入申请的域名，如果之前的准备工作做好了，就可以进入wordpress的安装，也就是著名的5分钟安装。填写好博客标题和邮箱以及设置好管理员密码后，安装完成！
+
+此时，属于个人的博客就算搭建完成。当然，距离一个好博客还有很长的路要走。

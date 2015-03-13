@@ -1,0 +1,24 @@
+---
+date: 2012-05-30 02:52:42+00:00
+layout: post
+title: 使用代理刷网络投票
+categories:
+- Python
+description: "学校举行了社团评优的评比活动，投票分为实地投票和网络投票。实地投票只能靠人脉拉票，而网络投票不是。为了刷票，我试着下了几个小工具但都没有成功，于是决定自己写一个刷票的脚本。"
+---
+
+学校举行了社团评优的评比活动，投票分为实地投票和网络投票。实地投票只能靠人脉拉票，而网络投票不是。为了刷票，我试着下了几个小工具但都没有成功，于是决定自己写一个刷票的脚本。我研究了一下，发现删除cookies不能再次投票，而更换IP地址则可以再次投票，我猜投票应该只有IP的限制。随后我用firefox+firebug抓取投票的POST内容。然后开始上网搜集代码和资料。
+
+要突破IP的限制，网上看到两种主流方法：
+
+1. IP欺骗。
+2. 使用代理
+
+我尝试的是使用代理的方法。在python中，urllib2模块可以很方便地进行操作。
+    
+    proxy_handler = urllib2.ProxyHandler({"http" : 'http://*.*.*.*:8080'})
+    opener = urllib2.build_opener(proxy_handler)
+
+剩下的工作就是POST投票数据了，具体就不再说了。
+
+参考教程：[http://blog.vnnii.com/2010/12/05/python-vote.html](http://blog.vnnii.com/2010/12/05/python-vote.html)

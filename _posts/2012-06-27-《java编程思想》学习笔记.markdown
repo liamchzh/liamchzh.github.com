@@ -1,0 +1,353 @@
+---
+date: 2012-06-27 12:59:59+00:00
+layout: post
+title: 《JAVA编程思想》学习笔记
+categories:
+- Java
+description: "Java的基本知识"
+---
+
+基本数据类型有：boolean, char, byte, short, int, long, float, double, void
+
+创建对象：ATypeName a = new ATypeName();
+引用对象成员：objectReference.member
+
+若某类的某个成员是基本类型，创建对象时即使没有进行初始化，JAVA也会确保它获得一个默认值。例boolean:false;int: 0
+但以上并不适用于“局部”变量，例如某个方法内的新建成员
+
+static关键字的作用：
+
+只有执行new来创建对象时，数据存储空间才会被分配，其方法才能被外界调用。
+
+两种情形上述方法无法解决。一是：只想为某特定域分配单一存储空间，而不考虑创建多少对象。二是：即使不创建对象也能调用这个方法。使用static就能解决以上问题。
+
+语法：把static关键字放在字段或方法前。
+
+    class StaticTest{
+        static int i = 47;
+        Static void fun(){
+        System.out.println("hello");
+        }
+    }
+    
+
+可以对类的变量直接引用：StaticTest.i 或者 Static.fun();
+
+Foreach语法：一种更简洁的For语法用于数组和容器  
+for(int i : range(1, 10)){ ……}  
+其中range的使用要import static net.mindview.util.Range.*;  
+
+使用构造器（constructor）确保初始化：  
+构造器采用与类相同的名称，在创建对象时就会调用相应的构造器，来确保初始化。  
+构造器能带有形式参数，于是可以在初始化对象时就提供实际参数。  
+构造器不能有返回值。  
+例1：
+
+    class Tree{
+        Tree(int i){
+            System.out.println("The tree is " + i + "feet");
+        }
+    }
+    Tree t = new Tree(12);//这棵树12尺高
+    
+例2：
+
+    class counter{
+        int i;
+        counter(){
+            i = 7;
+        }
+    }
+    
+
+默认构造器：  
+如果类中没有构造器，编译器会自动帮你创建一个。  
+但如果你写了构造器，编译器不会再帮你创建。这时如果创建对象时没有找到对应的构造器，会报错。  
+例如：
+
+    class Bird{
+        Bird(int i){}
+        Bird(double d){}
+    }
+    Bird b = new Bird();//编译器会报错，因为没有找到不带参数的构造器
+    
+
+方法重载：  
+让方法名相而形式参数不同的方法同时存在。适用于构造器。
+
+this关键字：  
+this关键字只能在方法内部使用，表示对“调用这个方法的那个对象”的引用。  
+使用this可以在构造器中调用其他构造器。  
+除构造器之外，编译器禁止在其他任何方法中调用构造器。  
+例：练习9：编写具有两个构造器的类，并在第一个构造器中通过this调用第二个构造器。  
+
+    
+    class Doc {
+        Doc(int i) {
+            this("MD"); //调用了第二个构造器
+            int yearsTraining = i;
+            System.out.println("New doc with " + i + " years of training");
+        }
+        Doc(String s) {
+        String degree = s;
+        System.out.println("New doc with " + s + " degree");
+        }
+        void intubate() {
+            System.out.println("prepare patient");
+            laryngoscopy();
+        }
+        void laryngoscopy() {
+            System.out.println("use laryngoscope");
+        }
+    }
+    public class OverloadedConstructors {
+        public static void main(String[] args) {
+            new Doc(8).intubate();
+        }
+    }
+    /* Output:
+    New doc with MD degree
+    New doc with 8 years of training
+    prepare patient
+    use laryngoscope
+    */
+    
+
+垃圾回收如何工作  
+
+1. Reference counting（引用计数）
+2. stop-and-copy（停止-复制）
+3. mark-and-sweep（标记-清扫）
+
+数组初始化  
+
+    int[] a1 = {1, 2, 3, 4};
+    int[] a2;
+    a2 = a1; // a1, a2是对数组的引用,这时可以通过a2对数组进行修改
+
+数组名.length表示数组长度  
+使用new创建数组并赋值  
+
+    int[] a = new int[20];
+    for(int i = 0; i < a.length; i++)
+        a[i] = new Integer(10);// 每个数都赋值为10.这里使用new来新建一个整数10的对象。
+
+
+访问权限从大到小：public-protect-包访问权限（没有关键字）-private  
+导入java.util中所有的类：import java.util.*  
+
+同一个文件夹下的class文件属于同一个包。  
+例如我的test项目  
+
+package语句：  
+类库是一组类文件，每个文件起码有一个public类和任意的非public类。  
+如果使用package语句，它必须是文件中除注释以外的第一句程序代码。  
+
+    package access.mypackage
+    public classs Myclass{
+        //
+    }
+
+如果要使用Myclass或者access中的其他public类，必须使用关键字import或给出完整名称：  
+access.mypackage.Myclass a = new access.mypackage Myclass();
+使用import 可以更加简洁
+
+    import access.mypackage.*
+    Myclass m = new Myclass();
+
+设置好系统的环境变量就可以方便地调用包了  
+例如：CLASSPATH = F:codejava  
+那么把类打包放到sample里，只需import sample.*即可调用  
+
+类的访问权：  
+
+1. 每个编译单元（文件）都只能有一个public类。
+2. public类的名称必须完全与含有该编译单元的文件名相匹配。
+注意类不可能是private和protected的。仅有两个选择：包访问权（无关键字）或public
+
+继承语法  
+
+    public class Detergent extends Cleanser{
+        //
+    }
+
+一般的规则是将所有的数据成员指定为private，将所有的方法指定为public.
+
+关键字super的作用  
+super关键和this作用类似，是被屏蔽的成员变量或者成员方法或变为可见，或者说用来引用被屏蔽的成员变量和成员成员方法。super是用在子类中的，目的是访问直接父类中被屏蔽的成员
+
+
+protected关键字  
+它指明，就类用户而言，这是private的，但对于任何继承与此类的导出类或其他任何位于同一个包内的类来说，它却是可以访问的。  
+
+向上转型
+先看一段代码
+    
+    class Instrument{
+        public void play(){}
+        static void tune(Instrument i){
+            i.play();
+        }
+    }
+    public class Wind extends Instrument{
+        public static void main(String[] args){
+            Wind flute = new Wind();
+            Instrument.tune(flute);
+        }
+    }
+    
+
+是否注意到tune方法的参数是Instrument对象，而调用的时候却使用了Wind对象。
+在tune中，程序代码可以对Instrument和它的所有导出类起作用，这种将Wind引用转换为Instrument引用的动作，称之为向上转型。
+
+final关键字：
+
+1. final数据
+一个永不改变的编译时常量  
+一个在运行时被初始化的值，而你不希望它被改变  
+一旦引用被初始化指向一个对象，就无法再把它改为指向另一个对象，但是，对象其自身却是可以被修改的。  
+
+2. final方法  
+把方法锁定，以防止任何继承类修改它的含义。类中所有的private方法都隐式地指定为final的。  
+
+3. final类  
+当某个类被定义成final时，它就不能被继承了。
+
+抽象类和接口  
+抽象方法：只声明函数接口而没有任何具体操作。  
+包含任何抽象方法的抽象类，不能为该类创建任何实例。  
+
+任何使用某特定接口的代码都知道可以调用该接口的方法有哪些。  
+interface关键字  
+创建一个接口，需要用interface关键字来替代class关键字。  
+接口的所有成员自动设置成public.  
+
+内部类   
+将一个类的定义放在另一个类的定义内部。  
+创建内部类对象：  
+必须使用外部类对象来创建内部类对象(.new)，而不是直接去new一个  
+例：
+    
+    OuterClass a = OuterClass();
+    OuterClass.InnerClass b = a.new InnerClass();
+    
+
+内部类拥有其外围类的所有成员的访问权。  
+
+持有对象  
+编程中，需要在任意时刻和任意位置创建任意数量的对象。所以不能依靠创建对象名的引用来持有每一个对象。  
+Collection是描述所有序列容器的共性的根接口。  
+Collection<类型> ListName = new ArrayList<类型>();尖括号内是类型参数，可以有多个，但是指定类型后只能将该类型的对象放在List中
+例：
+
+    Collection<Integer> int = new ArrayList<Integer>();
+
+ArrayList用add()插入对象，用get()访问这些对象，还有size()方法获取元素个数。  
+向上转型也可以用于add()方法——即继承的类的对象也可以添加  
+
+java容器类类库的用途是“保存对象”，并将其划分为两个不同的概念。
+
+1. Collection.一个独立元素的序列。包括List,Set,Queue.
+2. Map.一组成对的“键值对”对象。
+
+任何继承自Collection的类的对象都可以正常工作。
+例：    
+    
+    Collection<Integer> c = new ArrayList<Integer>();
+    Set<Integer> c = new HashSet<Integer>();
+    
+如何添加一组元素
+Array.asList()方法接受一个数组或者用逗号分隔的元素列表。  
+Collection<Integer> c = new ArrayList<Integer>(Array.asList(1, 2, 3));  
+Collection.addAll()方法接受一个Collection对象。  
+
+List接口  
+List是有序的Collection  
+有两种类型的List  
+
+1. ArrayList
+2. LinkedList
+
+两者的继承关系：
+
+    public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable
+    public class LinkedList<E> extends AbstractSequentialList<E> implements List<E>, Queue<E>, Cloneable, Serializable
+
+可以看出两者都实现List接口
+
+ArrayList和LinkedList的大致区别：
+
+1. ArrayList是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构。
+2. 对于随机访问get和set，ArrayList觉得优于LinkedList，因为LinkedList要移动指针。
+3 .对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。
+
+迭代器  
+迭代器是一个对象，作用是遍历并选择序列中的对象。  
+Collection容器都有一个iterator()的方法。  
+Iterator的方法有：hasNext(), next(), remove()等。  
+Iterator<object> iter = Collection.iterator();  
+iter.hasNext();//返回布尔值，表示是否还有下一个元素  
+iter.next();//返回对象  
+所以一般用于历遍的代码如下：
+    
+    for(Iterator it = c.iterator(); it.hasNext(); ) {
+    Object o = it.next();
+    // 对o的操作...
+    }
+    
+
+所以下面的代码作用是一样的：
+    
+    while(it.hasNext()){
+        it.next().hop();
+    }//迭代器
+    for(Gerbil g : gerbils)//Foreach方法
+    g.hop();
+    
+
+Set不保存重复的元素。  
+Vector是同步的。  
+
+I/O系统
+File类  
+需要import java.io.File;  
+创建文件对象
+File f = new File(路径);  
+文件对象方法有：
+
+• 创建文件：public boolean createNewFile() throws IOException
+• 删除文件：public boolean delete()
+• 判断文件是否存在：public boolean exists()
+• 判断是否是文件：public boolean isFile()
+• 判断是否是文件夹（目录）：public boolean isDirectory()
+• 列出一个目录下的文件或文件名：public String[] list()
+• File类中提供了创建目录的方法：public boolean mkdir()
+
+字节流           字符流  
+InputStream     Reader  
+OutputStream    Writer  
+有两类流，InputStream and OutputStream。这两个都是抽象类，不能直接使用  
+
+InputStream 的方法有：  
+
+1. read() 从流中读入数据 有3中方式：
+2. int read() 一次读一个字节
+3. int read(byte[]) 读多个字节到数组中
+4. int read(byte[],int off,int len) 指定从数组的哪里开始，读多长
+5. skip() 跳过流中若干字节
+6. available() 返回流中可用字节数，但基于网络时无效，返回0
+7. markSupported() 判断是否支持标记与复位操作
+8. mark() 在流中标记一个位置，要与markSupported()连用
+9. reset() 返回标记过的位置
+10. close() 关闭流
+
+OutputStream 的方法:
+
+* write(int) 写一个字节到流中
+* write(byte[]) 将数组中的内容写到流中
+* write(byte[],int off,int len) 将数组中从off指定的位置开始len长度的数据写到流中
+* close() 关闭流
+* flush() 将缓冲区中的数据强制输出
+
+reader&writer处理的是字符流。  
+BufferedReader是Reader的一个子类，它具有缓冲的作用，避免了频繁的从物理设备中读取信息。

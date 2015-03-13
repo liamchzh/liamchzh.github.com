@@ -1,13 +1,18 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title: "Liam's Blog"
+url: "http://liamchzh.github.io"
+author: "Liam"
+email: "liamchzh@gmail.com"
+description: "Liam's Blog"
 baseurl:     ""
-url:         "http://pixyll.com"
 
 # Google analytics
 google_analytics:
+  provider : google
+  google : 
+      tracking_id : 'UA-48154886-1'
+  getclicky :
+    site_id :
 
 # Optional features
 animated:           false

@@ -1,0 +1,26 @@
+---
+date: 2012-04-17 02:14:07+00:00
+layout: post
+title: 关于BitLog
+categories: [Python]
+description: "BitLog是用python + tkinter写一款用于BIT的宽带认证客户端。"
+---
+
+BitLog是用python + tkinter写一款用于BIT的宽带认证客户端。
+
+写这样一个软件的想法开始于2011年底，而真正开始是在2012年4月，从构思到编码再到debug完成花了一个多星期的全部课外时间。python是很强大的，做界面有wxpython和tkinter两种主流的方法，开始的时候比较了一下两者，最后决定使用tkinter进行开发。因为是一边学习一边开发，所以速度很慢，常常为了一个功能需要查大量的资料。
+
+其实学校已经提供了官方的登陆客户端surn3000，相比于旧版本的surn3000，现在的版本不论从程序大小还是程序界面来说，都不如旧版本简洁，并且新版本的注销功能不太完善，所以才萌生自己写一个的想法。
+
+为了使软件尽量简洁，我只开发了最基本的功能——登陆和注销。整个程序的源代码只有8k，如果系统有带有[python环境](http://woodpecker.org.cn/diveintopython/installing_python/index.html)，可以直接运行。但是想到大家不会那么耐心地去配置python环境，所以我用py2exe把它编译成一个可以直接在windows下运行的exe版本，也因为这样，程序运行需要很多文件（十多兆）来提供支持，我已经这些文件打包好在一个文件夹里，相信不会影响大家的使用心情。
+
+这是一个开源的项目，所以任何人可以免费使用/引用/修改/发布代码。如果你在使用过程中遇到问题或者想提出建议，欢迎联系我:liamchzh@gmail.com
+
+下载地址：
+1：sourceforge下载：[https://sourceforge.net/projects/bitlog-exe/files/](https://sourceforge.net/projects/bitlog-exe/files/)
+
+2: 极速之星下载：[http://bitpt.cn/bbs/forum.php?mod=viewthread&tid=172680](http://bitpt.cn/bbs/forum.php?mod=viewthread&tid=172680)
+
+更新：v2.0已经出来了。
+
+

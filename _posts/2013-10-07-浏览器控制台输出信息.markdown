@@ -1,0 +1,21 @@
+---
+date: 2013-10-07 11:45:08+00:00
+layout: post
+title: 浏览器控制台输出信息
+categories:
+- Web
+description: "有些网站在Console非常有趣"
+---
+
+打开浏览器控制台(Chrome的话，按F12)，可以看到有些网站在Console的有趣的信息。例如知乎，还有豆瓣和百度也是。  
+
+原来只要一句console.log()即可。但是如果想玩出一些玩样，例如像知乎那样的立体图案，那就要花些心思了。  
+
+找到两篇不错到文章：  
+
+[用好浏览器的控制台](http://www.imququ.com/post/about-browser-devtools-console.html)  
+
+[Chrome 控制台新玩法-向输出到console的文字加样式](http://www.cnblogs.com/Wayou/p/chrome_dev_tool_style_console.html)
+
+
+

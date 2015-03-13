@@ -1,0 +1,63 @@
+---
+date: 2012-12-19 11:56:35+00:00
+layout: post
+title: 数字图像处理
+categories:
+- Python
+description: "经过12周的课程，数字图像处理这门课结课了。"
+---
+
+经过12周的课程，数字图像处理这门课结课了。
+
+这门课的主要内容包括：
+	
+  * 图像的数字化和显示
+  * 图像变换
+  * 图像增强
+  * 图像编码和压缩
+  * 图像复原
+  * 图像分割
+  * 彩色图像处理
+  * 数学形态学
+  * 图像分析与模式识别
+
+课后作业一般是自行写代码对图像进行处理，较难的内容可以使用[MATLAB](http://zh.wikipedia.org/wiki/MATLAB)或[OpenCV](http://zh.wikipedia.org/zh-cn/OpenCV).我依然使用python作为开发语言。python有强大的[PIL](http://www.pythonware.com/products/pil/)(Python Imaging Library),让我能够对图像快速进行各种处理。
+
+从最开的简单功能开始，然后一点一点增加功能，目前已经完成的功能有：
+	
+  * 点运算：采样和量化，均衡化，线性增强减弱，非线性变换
+  * 放大及旋转：最临近插值法放大，双线性插值法放大，逆时针旋转45度
+  * 图像变换：傅立叶变换，离散余弦变换
+  * 图像增强：平滑，弱化
+  * 压缩：哈夫曼编码
+  * 图像分割：基于拉普拉斯算子和Canny算子的边缘检测，图像细化
+  * 灰度化：24位真彩色转256灰度
+
+部分功能没有完成：
+
+  * 读取调色板数据
+  * 沃尔什变换和小波变换
+  * 图像压缩
+  * 图像复原
+  * 霍夫变换检测直线和圆
+  * 真彩色转256色
+
+
+代码请见[这里](https://github.com/liamchzh/image_process)。编码过程中参考过大量资料，也有小部分直接copy,由于是代码一点一点写成的，请原谅我无法一一给出参考连接。
+
+以下是一些处理实例
+
+[![平滑](http://liamchzh.com/wp-content/uploads/2012/12/平滑-300x300.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/%e5%b9%b3%e6%bb%91/#main)![灰度化](http://liamchzh.com/wp-content/uploads/2012/12/灰度化-300x300.jpg)[![边缘](http://liamchzh.com/wp-content/uploads/2012/12/边缘-300x300.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/%e8%be%b9%e7%bc%98/#main)[![旋转](http://liamchzh.com/wp-content/uploads/2012/12/旋转-300x300.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/%e6%97%8b%e8%bd%ac/#main)[![线性增强](http://liamchzh.com/wp-content/uploads/2012/12/线性增强-300x300.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/%e7%ba%bf%e6%80%a7%e5%a2%9e%e5%bc%ba/#main)[![Canny](http://liamchzh.com/wp-content/uploads/2012/12/Canny-300x298.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/canny/#main)
+
+-------------------------------------------------------------------------------------------------------------------------
+
+说说图片背后的故事
+
+做过图像处理的人肯定对这张测试图像不陌生。该照片最初刊登于《花花公子》杂志（1972年11月刊），照片中的女主角名叫Lena.
+
+1973年的夏天，美国南加州大学信号与图像处理研究所里，助理教授亚历山大（Alexander Sawchuk）和研究员威廉（William Pratt）试图找到一张适合测试压缩算法的图片，来完成一篇论文。但一直没有找到满意的图像，无意中他们发现了《花花公子》的这张插图，这张有着光滑面庞和繁杂饰物的图片正好符合要求，于是便将上半身扫描下来，做成一张512 ×512的图片。论文发表后，不断有同行向亚历山大索要原始的扫描件，以便对图像压缩算法进行效果比较。久而久之，这张图片成为了图像处理领域的一个标准测试图。
+
+不多说，上原图
+
+
+[![42b2398c9c5855dca5c272c8](http://liamchzh.com/wp-content/uploads/2012/12/42b2398c9c5855dca5c272c8-140x300.jpg)](http://liamchzh.com/%e6%95%b0%e5%ad%97%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/42b2398c9c5855dca5c272c8/#main)

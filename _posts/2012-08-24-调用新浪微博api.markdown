@@ -1,0 +1,63 @@
+---
+date: 2012-08-24 05:06:45+00:00
+layout: post
+title: 调用新浪微博API
+categories:
+- Python
+description: "通过新浪微博的开放平台，可以开发应用或者其他一些有趣的事情。"
+---
+
+通过新浪微博的开放平台，可以开发应用或者其他一些有趣的事情。如何获取授权，网上已有很多教程，例如[这篇](http://www.how2dns.com/blog/?p=528)。通过学习调用API，可以深入学习后台的数据结构，还可以了解整个微博的运行机制。
+
+从2012年9月1日起，新浪就会要求全部使用[OAuth2.0](http://open.weibo.com/wiki/Oauth2)进行验证。刚开始接触，很多人可能会卡在这里，但是只要了解清楚整个认证过程，问题自然就解决了。
+
+
+<!-- more -->
+
+OAuth2.0的认证流程如下：
+
+
+
+	
+  1. 用户发起访问APP的请求
+
+	
+  2. APP查看用户是否已经授权或者授权是否过期
+
+	
+  3. 如果用户没有授权或者授权已经过期，则重新定向到授权页面。
+
+	
+  4. 用户授权后会返回一个code
+
+	
+  5. APP拿这个code到新浪验证，验证成功会返回一个access_token
+
+	
+  6. App拿这个token串和“App Key”以及“App Secret”来进行操作
+
+
+大致流程如上所述，但是这过程有个比较麻烦步骤，就是需要手动复制链接中的code number并输入。可能因为OAuth2.0的认证刚开始推行，很多人依然使用1.0的版本，所以我在网上一直没有找到这个问题的解决办法。后来无意中发现有人给出了[自动获取code的代码](http://my.csdn.net/michael_gmr/code/detail/13607)。
+
+代码如下：
+
+[py]<br />
+def get_code():<br />
+    conn = httplib.HTTPSConnection('api.weibo.com')<br />
+    postdata = urllib.urlencode ({'client_id':APP_KEY,'response_type':'code','redirect_uri':CALLBACK_URL,'action':'submit','userId':ACCOUNT,'passwd':PASSWORD,'isLoginSina':0,'from':'','regCallback':'','state':'','ticket':'','withOfficalFlag':0})<br />
+    conn.request('POST','/oauth2/authorize',postdata,{'Referer':url,'Content-Type': 'application/x-www-form-urlencoded'})<br />
+    res = conn.getresponse()<br />
+    #print 'headers===========',res.getheaders()<br />
+    print 'msg===========',res.msg<br />
+    print 'status===========',res.status<br />
+    print 'reason===========',res.reason<br />
+    print 'version===========',res.version<br />
+    location = res.getheader('location')<br />
+    print location<br />
+    code = location.split('=')[1]<br />
+    conn.close()<br />
+    print code<br />
+    return code<br />
+[/py]
+
+有了这段代码，就可以自动获取code，然后获取token，然后you can do anything you want。

@@ -1,0 +1,63 @@
+---
+date: 2013-01-16 02:26:44+00:00
+layout: post
+title: 简单介绍Markdown
+categories:
+- Markdown
+---
+
+[Markdown](http://zh.wikipedia.org/zh-cn/Markdown)是一种轻量级标记语言。中文维基百科上显示创始人为[John Gruber](http://zh.wikipedia.org/w/index.php?title=John_Gruber&action=edit&redlink=1)和[Aaron Swartz](http://zh.wikipedia.org/wiki/Aaron_Swartz)。 Aaron,正是那个上星期刚刚自杀的天才少年，他的成就我不多说，网上有各种悼念文章。我非常感谢他对互联网的贡献。 Github除了能托管代码，还能干什么？写作！[理想的写作环境：git+github+markdown+jekyll](http://www.yangzhiping.com/tech/writing-space.html).其实这背后的理念就是让你专心码字，不用关注格式问题。而Markdown的目的正是如此。 Markdown的语法非常简单易学。下面简单介绍一下。
+
+### 1.标题 {#标题}
+    
+    <code>一级标题
+    =======
+    二级标题
+    ------- =和-都只需任意数量即可，效果如下： 
+    </code>
+
+\# 一级标题
+\#\# 二级标题 在标题文字行首加入1到6个`#`，代表1到6阶。（#后需加空格）
+
+### 2.区块引用 每行前加上‘>’即可,支持嵌套使用。
+
+### 3.列表 {#列表} 无序列表使用星号、加号或是减号作为列表标记：
+
+  * 无序序列1
+  * 无序序列2
+  * 无序序列3 有序列表则使用数字接着一个英文句点： 
+
+  1. 有序序列1
+  2. 有序序列2
+  3. 有序序列3 注意列表块前后需要空行。 
+
+### 4.代码区块 {#代码区块} 只需缩进 4 个空格或是 1 个制表符（注意列表块前后需要空行）：
+    
+    def fun(): 
+        print ‘hello world’
+
+
+段内代码，可以用**反引号**把它包起来 例如:`print helloworld`
+
+### 5.链接 {#链接} 链接文字都是用 [方括号] 来标记，然后接(http://)
+
+[思维碎片](http://liamchzh.com) 也可以直接引用链接 `<http://liamchzh.com/>` 会自动转换成：`<a href="http://liamchzh.com/">http://liamchzh.com/</a>` 效果：[http://liamchzh.com/](http://liamchzh.com/)
+
+### 6.强调 {#强调} Markdown 使用星号和下划线作为标记强调字词的符号，被
+
+`*` 或 `_` 包围的字词会被转成用 `<em>` 标签包围，用 `**` 或 `__` 包起来的话，则会被转成 `<strong>` _强调_ **着重强调**
+
+### 7.图片 {#图片}
+    
+    ![Alt text](http:// "图片标题")
+
+
+### 8.分隔线 {#分隔线} 三个或以上的星号或下划线，并且行内不能有其他东西。
+
+
+### 结束语 {#结束语} 语法的介绍结束了，我相信很多人5分钟就可以学会。 
+想要再深入，可以看一看[Markdown语法说明](https://gitcafe.com/riku/Markdown-Syntax-CN/blob/master/syntax.md)。 
+
+
+2013.2.28补充：
+wordpress有一个叫[WP-Markdown](http://wordpress.org/extend/plugins/wp-markdown/)的插件。安装后就可以设置（设置-撰写），然后使用Markdown进行写作了，支持在文章、页面和评论中使用Markdown。

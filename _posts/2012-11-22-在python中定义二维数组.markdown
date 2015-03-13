@@ -1,0 +1,77 @@
+---
+date: 2012-11-22 08:12:01+00:00
+layout: post
+title: 在python中定义二维数组
+categories:
+- Python
+description: "一次偶然的机会，发现python中list非常有意思。"
+---
+
+一次偶然的机会，发现python中list非常有意思。
+
+先看一段代码
+
+    array = [0, 0, 0]
+    matrix = [array*3]
+    print matrix
+    ## [[0,0,0,0,0,0,0,0,0]]
+
+这段代码其实没有新建一个二维数组
+
+再看一段代码
+
+    array = [0, 0, 0]
+    matrix = [array] * 3
+    print matrix
+    ## [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+咋一看这段代码应该创建一个二维数组了
+
+测试一下
+
+    matrix[0][1] = 1
+    print matrix
+    ## [[0, 1, 0], [0, 1, 0], [0, 1, 0]]
+
+
+照理matrix[0][1]修改的应该只是二维数组中的一个元素，但是测试结果表明，修改的是每个List的第二个元素。
+有问题看文档，然后我找到了[The Python Standard Library](http://docs.python.org/2/library/index.html )
+其中[5.6. Sequence Types](http://docs.python.org/2/library/stdtypes.html#sequence-types-str-unicode-list-tuple-bytearray-buffer-xrange)是这样描述的：
+
+
+Note also that **the copies are shallow; nested structures are not copied**. This often haunts new Python programmers; consider:
+
+    >>> lists = [[]] * 3
+    >>> lists
+    [[], [], []]
+    >>> lists[0].append(3)
+    >>> lists
+    [[3], [3], [3]]
+
+What has happened is that [[]] is a one-element list containing an empty list, so all three elements of [[]] * 3 are (pointers to) this single empty list. Modifying any of the elements of lists modifies this single list. You can create a list of different lists this way:
+
+    >>> lists = [[] for i in range(3)]
+    >>> lists[0].append(3)
+    >>> lists[1].append(5)
+    >>> lists[2].append(7)
+    >>> lists
+    [[3], [5], [7]]
+
+也就是说matrix = [array] * 3操作中，只是创建3个指向array的引用，所以一旦array改变，matrix中3个list也会随之改变。
+
+那如何才能在python中创建一个二维数组呢？
+例如创建一个3\*3的数组
+方法1 直接定义
+
+    matrix = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+
+方法2 间接定义
+
+    matrix = [[0 for i in range(3)] for i in range(3)]
+
+附：
+[我的测试代码](https://github.com/liamchzh/python/blob/master/TwoDimensional_Array.py)
+
+参考：
+[python的二维数组操作](http://www.cnblogs.com/btchenguang/archive/2012/01/30/2332479.html)
+[stackoverflow](http://stackoverflow.com/questions/6667201/how-to-define-two-dimensional-array-in-python)

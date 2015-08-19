@@ -12,7 +12,7 @@ But now we have to across the Great Fire Wall so we can reach every corner in th
 
 **Note: TBD**
 
-[AGFW](https://github.com/liamchzh/AGFW)
+[View on GitHub](https://github.com/liamchzh/AGFW)
 
 ### 3. 「人在北理」
 

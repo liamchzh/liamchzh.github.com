@@ -4,13 +4,23 @@ title: My Projects
 permalink: /projects/
 ---
 
-### 1. BitLog
+### 4. AGFW
 
-北理工外网登录客户端，分为PC版和Chrome插件。
+'Across the Great Wall we can reach every corner in the world.'
 
-1. PC版：使用gtk+python实现的客户端 [查看代码](https://github.com/liamchzh/BitLog)
+But now we have to across the Great Fire Wall so we can reach every corner in the world.
 
-2. Chrome extension：基本的html + jquery + Bootstrap [查看代码](https://github.com/liamchzh/BitLog-Extension)
+**Note: TBD**
+
+[AGFW](https://github.com/liamchzh/AGFW)
+
+### 3. 「人在北理」
+
+Tornado + Bootstrap + MySQL, 搭建在新浪 SAE 平台。
+
+提供图书交易和树洞功能的校园平台。
+
+[View on GitHub](https://github.com/liamchzh/atbit)
 
 ### 2. 「人在北理」微信公众平台
 
@@ -18,13 +28,12 @@ permalink: /projects/
 
 基于Django，部署在新浪SAE平台，使用了一些免费的API接口。
 
-[GitHub地址](https://github.com/liamchzh/bithelper)
+[View on GitHub](https://github.com/liamchzh/bithelper)
 
-### 3. 「人在北理」网页 [http://atbit.sinaapp.com/](http://atbit.sinaapp.com/)
+### 1. BitLog
 
-Tornado + Bootstrap + MySQL, 搭建在新浪SAE平台。
+北理工外网登录客户端，分为PC版和Chrome插件。
 
-提供图书交易和树洞功能的校园平台。
+1. PC版：使用gtk+python实现的客户端 [View on GitHub](https://github.com/liamchzh/BitLog)
 
-[GitHub地址](https://github.com/liamchzh/atbit)
-
+2. Chrome extension：基本的html + jquery + Bootstrap [View on GitHub](https://github.com/liamchzh/BitLog-Extension)

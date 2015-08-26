@@ -3,8 +3,8 @@ title: "Liam's Blog"
 url: "http://liamchzh.github.io"
 author: "Liam"
 email: "liamchzh@gmail.com"
-description: "My Blog"
-baseurl:     ""
+description: "A place to share my experiences and thoughts"
+baseurl: ""
 
 # Google analytics
 google_analytics:

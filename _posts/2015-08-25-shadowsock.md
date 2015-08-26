@@ -2,7 +2,7 @@
 date: 2015-08-25
 layout: post
 title: shadowsocks
-description: ""
+description: "shadowsocks was a great project, which helps us to across the GFW. But now it was removed according to regulations."
 categories: [Tech]
 ---
 
@@ -10,7 +10,7 @@ shadowsocks was a great project, which helps us to across the GFW. But now it wa
 
 I really appreciate what clowwindy has done for us.
 
-- - - - - README - - - - - 
+ - - - - - README - - - - - 
 
 A fast tunnel proxy that helps you bypass firewalls.
 

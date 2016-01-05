@@ -3,7 +3,7 @@ date: 2016-01-05
 layout: post
 title: PM 应该知道的事情
 description: "从开发的角度，去思考作为 PM，应该具备的技能。"
-categories: [Develop, Product]
+categories: [Product]
 ---
 作为一个程序员，却写如何做产品的事情，我并不是喧宾夺主，而是从开发的角度，去思考作为 PM，应该具备的技能。
 

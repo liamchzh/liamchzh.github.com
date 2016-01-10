@@ -6,8 +6,6 @@ description: My best pics of 2015.
 categories: [photograph]
 ---
 
-# The Best Nine of 2015
-
 2015 的最后一天，在 [2015 best nine](http://2015bestnine.com/) 看到自己 2015 在 Instagram 赞数最多的 9 张照片。里面的每一张，都有着或多或少、或长或短的故事。
 
 ### 1

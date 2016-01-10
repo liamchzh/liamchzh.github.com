@@ -58,12 +58,12 @@ categories: [photograph]
 
 ### Others
 不仅仅以上 9 张，还有一些也非常喜欢：
-![best9of2015-10](/images/best9of2015-10.jpg)
 ![best9of2015-14](/images/best9of2015-14.jpg)
 ![best9of2015-11](/images/best9of2015-11.jpg)
+![best9of2015-10](/images/best9of2015-10.jpg)
 ![best9of2015-12](/images/best9of2015-12.jpg)
 ![best9of2015-13](/images/best9of2015-13.jpg)
 
 - - - - - - - - - - - - - -
-我会一直在路上，欢迎关注我的 Instagram: [liamchzh](https://www.instagram.com/liamchzh/)
+欢迎关注我的 Instagram: [liamchzh](https://www.instagram.com/liamchzh/)
 

@@ -7,7 +7,6 @@ categories: [Tech]
 ---
 
 主要摘自 [Mastering Bitcoin - chapter07](http://chimera.labs.oreilly.com/books/1234000001802/ch07.html)
-- - - - - - - - - - - - - 
 
 区块链是一串使用密码学方法相关联产生的数据块。每一个区块都有一个唯一的哈希值，区块头还有一个指向前一个区块。每个区块只能有一个父区块，但可以暂时拥有多个子区块。
 

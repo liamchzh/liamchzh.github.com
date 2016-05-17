@@ -4,8 +4,8 @@ title: About Me
 permalink: /about/
 ---
 
-Who: 陈铮  
-E-mail: liamchzh#gmail.com  
+Who: Longxiang Wang
+E-mail: wlongxiang1119@gmail.com  
 tags: Python, Vim, Git, 读书，编程，旅行，写作  
 Sports: 足球，长跑，游泳  
 Motto: 人生苦短，我用 Python.  

@@ -44,5 +44,5 @@ Code review 的目的不仅仅是为了把控代码质量，还有提高工作�
 最近的工作，另外项目组的同事需要改动我在的组所负责的项目，由他们组开发，我来评审，但是由于两个组沟通不够充分，而我也不够熟悉需求，当我在评审的时候，往往只是看看有没有简单的错误而已，没有做更深层次的 Review ，因此导致后续测试的时候，发现了一堆 Bug 和漏掉需求没有实现的情况。为了去修复这些问题，后来还花了不少时间，实在得不偿失。
 
 ## References
-* [http://codeahoy.com/2016/04/03/effective-code-reviews/]
-* [http://gold.xitu.io/entry/56d501cdc507b6005568b942]
+* (Effective Code Reviews)[http://codeahoy.com/2016/04/03/effective-code-reviews/]
+* (说说 Code Review)[http://gold.xitu.io/entry/56d501cdc507b6005568b942]

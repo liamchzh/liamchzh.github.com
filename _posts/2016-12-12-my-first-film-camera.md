@@ -19,40 +19,40 @@ description: ""
 ![Zenit-E](https://upload.wikimedia.org/wikipedia/commons/0/06/Zenit-E_Camera_with_Industar_50mm_lens.jpg)
 Zenit-E 35mm Camera with Industar 50mm lens
 
-![film-photo](images/WechatIMG5.jpeg)
+![film-photo](/images/WechatIMG5.jpeg)
 
-![film-photo](images/WechatIMG6.jpeg)
+![film-photo](/images/WechatIMG6.jpeg)
 
-![film-photo](images/WechatIMG7.jpeg)
+![film-photo](/images/WechatIMG7.jpeg)
 
-![film-photo](images/WechatIMG8.jpeg)
+![film-photo](/images/WechatIMG8.jpeg)
 
-![film-photo](images/WechatIMG9.jpeg)
+![film-photo](/images/WechatIMG9.jpeg)
 
-![film-photo](images/WechatIMG10.jpeg)
+![film-photo](/images/WechatIMG10.jpeg)
 
-![film-photo](images/WechatIMG11.jpeg)
+![film-photo](/images/WechatIMG11.jpeg)
 
-![film-photo](images/WechatIMG12.jpeg)
+![film-photo](/images/WechatIMG12.jpeg)
 
-![film-photo](images/WechatIMG13.jpeg)
+![film-photo](/images/WechatIMG13.jpeg)
 
-![film-photo](images/WechatIMG14.jpeg)
+![film-photo](/images/WechatIMG14.jpeg)
 
-![film-photo](images/WechatIMG15.jpeg)
+![film-photo](/images/WechatIMG15.jpeg)
 
-![film-photo](images/WechatIMG16.jpeg)
+![film-photo](/images/WechatIMG16.jpeg)
 
-![film-photo](images/WechatIMG17.jpeg)
+![film-photo](/images/WechatIMG17.jpeg)
 
-![film-photo](images/WechatIMG18.jpeg)
+![film-photo](/images/WechatIMG18.jpeg)
 
-![film-photo](images/WechatIMG19.jpeg)
+![film-photo](/images/WechatIMG19.jpeg)
 
-![film-photo](images/WechatIMG20.jpeg)
+![film-photo](/images/WechatIMG20.jpeg)
 
-![film-photo](images/WechatIMG21.jpeg)
+![film-photo](/images/WechatIMG21.jpeg)
 
-![film-photo](images/WechatIMG22.jpeg)
+![film-photo](/images/WechatIMG22.jpeg)
 
-![film-photo](images/WechatIMG23.jpeg)
+![film-photo](/images/WechatIMG23.jpeg)

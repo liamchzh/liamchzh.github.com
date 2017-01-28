@@ -2,7 +2,7 @@
 date: 2016-02-08
 layout: post
 title: 八千公里火车之旅
-description:
+description: "15 年国庆，继续我的旅程，很巧的是这回又是去「红色」的国家。"
 categories: [Travel]
 ---
 

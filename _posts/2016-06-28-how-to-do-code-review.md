@@ -1,7 +1,7 @@
 ---
 date: 2016-06-28
 layout: post
-title: 如何做 Code Revie
+title: 如何做 Code Review
 categories: [Web]
 description: "Why we need code review?"
 ---

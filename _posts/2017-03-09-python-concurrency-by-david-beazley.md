@@ -2,7 +2,7 @@
 date: 2017-03-09
 layout: post
 title: David Beazley - Python Concurrency
-description: There are currently three popular approaches to Python concurrency: threads, event loops, and coroutines. Each is shrouded by various degrees of mystery and peril. In this talk, all three approaches will be deconstructed and explained in a epic ground-up live coding battle.
+description: "There are currently three popular approaches to Python concurrency: threads, event loops, and coroutines. Each is shrouded by various degrees of mystery and peril. In this talk, all"
 categories: [Tech]
 ---
 

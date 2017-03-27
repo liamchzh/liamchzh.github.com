@@ -20,6 +20,15 @@ Carlton Garden 也有草坪，人们在这里更多是坐下聊天晒太阳。�
 
 参观完墨尔本博物馆之后，让我更加喜爱这里。博物馆里展览的形式一点都不拘泥，主题非常有创意，从自然科学到人文，从历史到现代科技，都有相关的展览。从路线、展品、展览方式等等，每个展览都让我觉得非常棒，全方位的体验刺激着不同的感官，在国内我只想起上海的自然博物馆有给我同样的感觉。墨尔本博物馆里的每一个展览，我都能感受到策展人的用心，他们不是用传统的说教方式去讲故事，而是用让人沉浸的道具和展品，使你去体会。
 
+*Flinders Street railway station*
+![Melbourne](/images/melbourne-1.jpg)
+
+*Carlton Garden*
+![Melbourne](/images/melbourne-2.jpg)
+
+*Princes Park*
+![Melbourne](/images/melbourne-3.jpg)
+
 ## Coffee
 
 在墨尔本，我再没有喝过星巴克。不是因为星巴克不好喝，而是在这个街头遍布咖啡馆的城市，有很多更好的选择。
@@ -31,6 +40,12 @@ Carlton Garden 也有草坪，人们在这里更多是坐下聊天晒太阳。�
 很快我就把附近的咖啡店都喝了一遍，墨尔本的咖啡没有让我失望，很多店家连杯子都非常好看。我开始收集不同店的杯子，在巷子里寻找涂鸦或墙壁作为背景，拍下来。我渐渐发现，咖啡店不仅是个品尝咖啡的地方。大家点咖啡时候，经常会跟咖啡师寒暄起来，部分店面很小，以至于没有几张桌子，但是门口一般会放着凳子，也是三几好友聊天的好地方。在我最喜欢的 Campos，桌子很多，有大大的落地窗，环境非常明亮，很多人会点一杯咖啡，拿份报纸或杂志，坐下静静翻阅。
 
 一个多月里，尝过了十几家店，可是我依然觉得这只是冰山一角。时不时看到墨尔本咖啡的推荐文章，然后默默记下，等待某天去品尝。
+
+*Campos Coffee*
+![Melbourne](/images/melbourne-4.jpg)
+
+*Market Lane Coffee*
+![Melbourne](/images/melbourne-5.jpg)
 
 ## Gap year
 
@@ -51,3 +66,20 @@ Carlton Garden 也有草坪，人们在这里更多是坐下聊天晒太阳。�
 幸福就是我所期待的美好一天，变成普通的每一天。
 
 EOF
+
+* * *
+
+墨尔本的阳光太好了，蓝天白云，建筑也好看，配合树木，光影的效果一次又一次震撼了我。配合胶片，拍出来的照片简直惊艳。
+
+![Melbourne](/images/melbourne-6.jpg)
+![Melbourne](/images/melbourne-7.jpg)
+![Melbourne](/images/melbourne-8.jpg)
+![Melbourne](/images/melbourne-9.jpg)
+![Melbourne](/images/melbourne-10.jpg)
+![Melbourne](/images/melbourne-11.jpg)
+![Melbourne](/images/melbourne-12.jpg)
+![Melbourne](/images/melbourne-13.jpg)
+![Melbourne](/images/melbourne-14.jpg)
+![Melbourne](/images/melbourne-15.jpg)
+![Melbourne](/images/melbourne-16.jpg)
+![Melbourne](/images/melbourne-17.jpg)

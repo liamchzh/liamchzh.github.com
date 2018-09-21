@@ -21,11 +21,11 @@ Russ 连发[ 7 篇文章](https://research.swtch.com/vgo)，讲述了 vgo 的技
 
 Go Modules 在 proposal 里提出了几个新的概念。
 
-1. Modules
+### Modules
 
 Module 是一些有特定版本的 Go package 的集合，非常重要的一点是，它们是统一的整体，并且是使用语义化版本的。
 
-2. go.mod
+### go.mod
 
 每个 module 都是在 `go.mod` 文件中定义的源代码树。Module 的源代码可以不在 Go Path 下。
 
@@ -50,7 +50,7 @@ replace (
 )
 ```
 
-3. [Semantic Import Versioning](https://research.swtch.com/vgo-import)
+### [Semantic Import Versioning](https://research.swtch.com/vgo-import)
 
 不兼容的升级应该怎么做？Semantic Import Versioning 的第一条规则就是：如果新的 package 和旧的 package，是同样的 import 路径，那么新的包就必须向后兼容。
 
@@ -58,7 +58,7 @@ replace (
 
 ![](/images/gomodules01.jpg)
 
-4. Minimal Version Selection
+### Minimal Version Selection
 
 当安装或者升级依赖的时候，MVS 选择能满足依赖需求的版本中最老的（版本号最小的）。
 
@@ -144,19 +144,19 @@ $ git push --tags
 
 ## 答疑
 
-1. 没有 GOPATH 和 Vendor，那编译的时候怎么找到依赖？
+1.没有 GOPATH 和 Vendor，那编译的时候怎么找到依赖？
 
 如果 GO111MODULE 设置了打开，那么编译的时候会忽略 vendor 目录。
 
-2. 编译的时候，下载的包放在哪里？
+2.编译的时候，下载的包放在哪里？
 
 `$GOPATH/pkg/mod` 目录下
 
-3. 在 GOPATH 之外，报错 `outside GOPATH, no import comments`
+3.在 GOPATH 之外，报错 `outside GOPATH, no import comments`
 
 需要指定导入的包名，例如`package main // import "github.com/you/hello"`
 
-4. go.sum 文件是干嘛用的？
+4.go.sum 文件是干嘛用的？
 
 用来记录每个依赖包的版本和哈希值
 

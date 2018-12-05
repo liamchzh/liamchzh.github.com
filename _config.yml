@@ -51,6 +51,6 @@ share_stumbleupon: false
 # Build settings
 markdown: kramdown
 permalink:    pretty
-paginate:     7
+paginate:     10
 sass:
   compressed: true

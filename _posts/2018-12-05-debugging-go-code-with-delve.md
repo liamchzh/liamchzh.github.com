@@ -1,5 +1,5 @@
 ---
-date: 2018-12-02
+date: 2018-12-05
 layout: post
 title: Debugging Go Code with Delve
 description: "Delve 是专门针对 Go 的 debugger"

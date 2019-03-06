@@ -8,6 +8,9 @@ email: "liamchzh@gmail.com"
 description: "A place to share my experiences and thoughts"
 baseurl: ""
 
+plugins:
+  - jekyll-seo-tag
+
 # Google analytics
 google_analytics:
   provider : google

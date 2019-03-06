@@ -9,6 +9,3 @@ categories: [Web]
 [http://liamchzh.com](http://liamchzh.com) 建站成功  
 谨以此文章纪念一下  
 2012.3.1
-
-
-

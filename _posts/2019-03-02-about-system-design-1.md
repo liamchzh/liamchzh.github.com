@@ -1,7 +1,7 @@
 ---
 date: 2019-03-02
 layout: post
-title: 关于 System Design Interview 所需要知道的
+title: All You Need to Know about System Design Interview - 1
 description: "最近看完了《Grokking the System Design Interview》，这个一个专门为 System Design 面试而准备的教程，里面对于面试中常见的场景，按照既定的模板，进行了分析和解答，同时还有一些后端的基本知识点。"
 categories: [Tech]
 ---

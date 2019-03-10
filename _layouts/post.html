@@ -39,13 +39,14 @@ layout: default
 {% endif %}
 
 {% if site.show_related_posts %}
-  <h3 class="related-post-title">Related Posts</h3>
-  {% for post in site.related_posts %}
+  <h2 class="related-post-title">YOU MIGTH ENJOY</h2>
+  {% for post in site.related_posts limit:3 %}
     <div class="post ml2">
-      <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
-        <h4 class="post-title">{{ post.title }}</h4>
-        <p class="post-summary">{{ post.summary }}</p>
-      </a>
+      <li>
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+          {{ post.title }}
+        </a>
+      </li>
     </div>
   {% endfor %}
 {% endif %}

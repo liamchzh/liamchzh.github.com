@@ -1,7 +1,7 @@
 ---
 date: 2012-11-22 08:12:01+00:00
 layout: post
-title: 在python中定义二维数组
+title: 在 Python 中定义二维数组
 categories:
 - Python
 description: "一次偶然的机会，发现python中list非常有意思。"

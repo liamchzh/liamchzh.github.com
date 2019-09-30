@@ -1,7 +1,7 @@
 ---
 date: 2012-11-05 04:07:21+00:00
 layout: post
-title: 使用git提交到github
+title: 使用 git 提交到 GitHub
 categories:
 - Git
 ---

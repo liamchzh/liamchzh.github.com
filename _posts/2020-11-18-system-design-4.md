@@ -85,5 +85,5 @@ In this post, we discussed the requirements of a rate limiter and different algo
 1. [Rate-limiting strategies and techniques - Google Cloud](https://cloud.google.com/solutions/rate-limiting-strategies-techniques)
 2. [How we built rate limiting capable of scaling to millions of domains](https://blog.cloudflare.com/counting-things-a-lot-of-different-things/)
 3. [Techniques for enforcing rate limits - Google Cloud](https://cloud.google.com/solutions/rate-limiting-strategies-techniques%23techniques-enforcing-rate-limits)
-4. [Better rate limiting with Redis sorted sets | Building ClassDojo](https://engineering.classdojo.com/blog/2015/02/06/rolling-rate-limiter/)
+4. [Better rate limiting with Redis sorted sets](https://engineering.classdojo.com/blog/2015/02/06/rolling-rate-limiter/)
 5. [System Design Interview - An Insider’s Guide](https://courses.systeminterview.com/courses/system-design-interview-an-insider-s-guide)

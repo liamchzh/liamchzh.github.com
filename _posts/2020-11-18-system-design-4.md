@@ -45,14 +45,14 @@ Although maintaining a rate can be as simple as counting an occurrence, there ar
 
 4. **Sliding window:** The sliding window algorithm can mitigate the problem mentioned in the fixed window algorithm. The idea of sliding window is to keep track of all requests timestamp and calculate whether the counter exceeds in the past fixed period when a request arrives, this algorithm is called sliding window log. Based on this, an optimized algorithm called “sliding window counter” requires fewer operations on the timestamps. I will talk about the difference and implementation detail.
 
-5. **Sliding window log algorithm:** As discussed above, this algorithm keeps track of all request timestamps. When a new request comes in, remove all the outdated timestamps and then count the remaining timestamps. If the counter exceeds the threshold, reject the request. To implement this sliding window log algorithm, we can take advantage of the sorted sets of Redis. We can use `ZREMRANGEBYSCORE` to count the timestamps. We can even set a TTL equal to the rate-limiting window and let Redis take care of the timestamp removal.
+    - **Sliding window log:** As discussed above, this algorithm keeps track of all request timestamps. When a new request comes in, remove all the outdated timestamps and then count the remaining timestamps. If the counter exceeds the threshold, reject the request. To implement this sliding window log algorithm, we can take advantage of the sorted sets of Redis. We can use `ZREMRANGEBYSCORE` to count the timestamps. We can even set a TTL equal to the rate-limiting window and let Redis take care of the timestamp removal.
 
-6. **Sliding window counter algorithm:** Instead of storing and managing all timestamps, this sliding window counter algorithm is the combination of fixed window and sliding window, and it keeps the benefits of the sliding window while just requires just 2 variables to keep track of the rate and counter. The idea of this algorithm is to use the information from the previous counter to extrapolate an accurate approximation of the request rate of current window. It smoothes the traffic spike.
+    - **Sliding window counter:** Instead of storing and managing all timestamps, this sliding window counter algorithm is the combination of fixed window and sliding window, and it keeps the benefits of the sliding window while just requires just 2 variables to keep track of the rate and counter. The idea of this algorithm is to use the information from the previous counter to extrapolate an accurate approximation of the request rate of current window. It smoothes the traffic spike.
 
 To give you an example, suppose the window period is 1 minute, the counter of the previous window is 42, and the current window starts 15 seconds ago. Based on this, the rate approximation of the current window can be calculated calculated like this: `42 * ((60 - 15) / 60) + 18 = 49.5`
 
 ![](/images/sliding-window.png)
-Diagram source [3]
+*Diagram source [3]*
 
 
 In conclusion, both algorithms have pros and cons. The bucket algorithms are simple and easy to implement. However, the downside of the token bucket algorithm and leaky bucket algorithm is that both of them have 2 parameters and it’s not easy to tune the parameters properly. As for the fixed window algorithm, it allows spikes at the edges of a window, which might cause more requests than the allowed quota to go through. However, sliding windows have the benefits of a fixed window, but the rolling window of time smooths outbursts. [2]
@@ -70,7 +70,7 @@ We have discussed the algorithms, now move to high-level design. We are going to
 ### Rules setting and response after being throttled
 To support a flexible setting, the rate limiter loads the rules configuration when it starts or has a mechanism to allow uses to update the rules. Here we introduce a config database to persist the configuration.
 
-Once a request is rate limited, the rate limiter should able to notify its client. Suppose we use HTTP protocol, code 429 can be returned and in the response, headers like `X-Ratelimit-Remaining` and `X-Ratelimit-Retry-After`can be added to tell the clients more info about the rate limit.
+Once a request is rate limited, the rate limiter should able to notify its client. Suppose we use HTTP protocol, code 429 can be returned and in the response, headers like `X-Ratelimit-Remaining` and `X-Ratelimit-Retry-After` can be added to tell the clients more info about the rate limit.
 
 ![](/images/rate-limiter-architecture-2.png)
 

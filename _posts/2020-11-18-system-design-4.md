@@ -32,16 +32,16 @@ In this article, we are going to assume the requirements of a rate limiter are:
 ### Client-side or server-side
 The reason not to implement on client side is that it’s easy to bypass or be forged. Moreover, we might not be able to force using a uniform client.
 
-Besides the client and server-side implementations, there is an alternative way., we create a rate limiter middleware, which is more intuitive since API gateway become widely popular in a microservice architecture.
+Besides the client and server-side implementations, there is an alternative way., we create a rate limiter at the middleware layer, which is more intuitive since API gateway become widely popular in a microservice architecture.
 
 ### Algorithms
 Although maintaining a rate can be as simple as counting an occurrence, there are several different algorithms to do it.
 
-1. **Token bucket:** The bucker has a capacity of tokens and the tokens will be refilled at some rate. Each request will attempt to withdraw a token from the bucket, if there are no tokens in the bucket, the service has reached its limit, otherwise, the request goes through.
+1. **Token bucket:** The bucket has a capacity of tokens and the tokens will be refilled at some rate. Each request will attempt to withdraw a token from the bucket, if there are no tokens in the bucket, the service has reached its limit, otherwise, the request goes through.
 
-2. **Leaky bucket:** A leaky bucket is similar to a token bucket, but the rate is limited by the amount that can drip or leak out of the bucket. The bucket is like a queue or buffer, requests are processed at a fixed rate. Requests will be added to the bucket as long as the bucker is not full, any extra request spills over the bucket edge and is discarded.
+2. **Leaky bucket:** A leaky bucket is similar to a token bucket, but the rate is limited by the amount that can drip or leak out of the bucket. The bucket is like a queue or buffer, requests are processed at a fixed rate. Requests will be added to the bucket as long as the bucket is not full, any extra request spills over the bucket edge is discarded.
 
-3. **Fixed window:** Windows are split upfront and each window has a counter. Each request increments the counter by one. Once the counter reaches the threshold, new requests are dropped until a new time window starts. This algorithm is easy to implement but they are subject to spikes at the edges of the window.
+3. **Fixed window:** Windows are split upfront and each window has a counter. Each request increases the counter by one. Once the counter reaches the threshold, new requests are dropped until a new time window starts. This algorithm is easy to implement but they are subject to spikes at the edges of the window.
 
 4. **Sliding window:** The sliding window algorithm can mitigate the problem mentioned in the fixed window algorithm. The idea of sliding window is to keep track of all requests timestamp and calculate whether the counter exceeds in the past fixed period when a request arrives, this algorithm is called sliding window log. Based on this, an optimized algorithm called “sliding window counter” requires fewer operations on the timestamps. I will talk about the difference and implementation detail.
 

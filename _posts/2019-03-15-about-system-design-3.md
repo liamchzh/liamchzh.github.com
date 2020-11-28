@@ -1,7 +1,7 @@
 ---
 date: 2019-03-15
 layout: post
-title: 知乎匿名系统设计 (About System Design - 3)
+title: System Design 3 - 知乎匿名系统设计
 description: "知乎的匿名功能，是在非常早期就已经加入的功能，至今问答业务历经各种迭代，匿名架构基本没有大改，从现在往回看，可以说当初的匿名系统设计，已经很好满足了产品的发展。但是如果我们能从现在的视角重新匿名系统，也许能做到更好。"
 categories: [Tech]
 ---

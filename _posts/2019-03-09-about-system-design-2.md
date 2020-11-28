@@ -1,7 +1,7 @@
 ---
 date: 2019-03-09
 layout: post
-title: All You Need to Know about System Design Interview - 2
+title: System Design 2 - Everything You Need to Know about
 description: "In this article, we’ll go through Load Balancing, Caching, Data Partitioning, Indexes, Replication and Consistent Hashing. These are the basics that you need to know about system design."
 categories: [Tech]
 ---

@@ -1,7 +1,7 @@
 ---
 date: 2018-11-04
 layout: post
-title: 《Kafka 权威指南》笔记（部分）
+title: Notes of <Kafka: The Definitive Guide>
 description: "该书介绍了如何部署 Kafka 集群、开发可靠的基于事件驱动的微服务，以及基于 Kafka 平台构建可伸缩的流式应用程序。"
 categories: [Kafka]
 ---

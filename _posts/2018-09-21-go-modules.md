@@ -1,7 +1,7 @@
 ---
 date: 2018-09-21
 layout: post
-title: Go Modules
+title: Working with Go Modules
 description: "2018 年初，Russ Cox 发出了 vgo 的提案，Golang 官方博客也发表了文章，介绍了这个关于 package versioning 的提案。"
 categories: [Golang]
 ---

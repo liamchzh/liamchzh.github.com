@@ -4,11 +4,17 @@ title: My Projects and Works
 permalink: /projects/
 ---
 
+### 5. SMARTS
+
+SMARTS (Scalable Multi-Agent RL Training School) is a simulation platform for reinforcement learning and multi-agent research on autonomous driving. Its focus is on realistic and diverse interactions.
+
+[GitHub - huawei-noah/SMARTS: Scalable Multi-Agent RL Training School for Autonomous Driving](https://github.com/huawei-noah/SMARTS)
+
 ### 4. Into the DPRK
 
 I went to North Korea in May 2015. I took a lot of videos and then clipped them together.
 
-[YouTube](https://www.youtube.com/watch?v=fmwqPx3BMSg)
+[YouTube - Into the DPRK](https://www.youtube.com/watch?v=fmwqPx3BMSg)
 
 ### 3. AGFW
 
@@ -32,6 +38,6 @@ Tornado + Bootstrap + MySQL, 搭建在新浪 SAE 平台。
 
 自动回复微信消息，提供校车时刻、天气、空气质量、新闻、翻译等信息。不定时群发提供学校通知和个人推荐，订阅人数约900人(截至2014年3月底)。
 
-基于Django，部署在新浪SAE平台，使用了一些免费的API接口。
+基于 Django，部署在新浪 SAE 平台，使用了一些免费的 API 接口。
 
 [View on GitHub](https://github.com/liamchzh/bithelper)

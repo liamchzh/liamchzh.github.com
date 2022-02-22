@@ -14,7 +14,7 @@ Whenever we are designing a large system, we need to consider a few things:
 In this article, we’ll go through Load Balancing, Caching, Data Partitioning, Indexes, Replication and Consistent Hashing. These are the basics that you need to know about system design.
 
 ## Key Characteristics of Distributed Systems
-Before diving into a specific section, we’ll discuss the key characteristics of distributed system include Scalability, Reliability, Availability and Manageability.
+Before diving into a specific section, we’ll discuss the key characteristics of distributed system including Scalability, Reliability, Availability and Manageability.
 
 **Scalability** is the capability of a system, process, or a network to grow and manage increased demand. Any distributed system that can continuously evolve in order to support the growing amount of work is considered to be scalable.
 
@@ -68,7 +68,7 @@ It is the process of splitting up a DB/table across multiple machines to improve
 2. Vertical Partitioning: In this scheme, we divide our data to store tables related to a specific feature in their own server.
 3. Directory Based Partitioning: We can also create a lookup service which knows your current partitioning scheme and abstracts it away from the DB access code.
 
-artitioning Strategy:
+Partitioning Strategy:
 * Key or Hash-based partitioning
 * List partitioning
 * Round-robin partitioning
@@ -110,14 +110,14 @@ Following are the most common types of NoSQL:
 
 **Scalability**: In most common situations, SQL databases are vertically scalable, i.e., by increasing the memory or CPU of the hardware, which can get very expensive. On the other hand, NoSQL databases are horizontally scalable, meaning we can add more servers easily in our NoSQL database infrastructure to handle a lot of traffic.
 
-**Eliability or ACID Compliancy**: The vast majority of relational databases are ACID compliant. When it comes to data reliability and safe guarantee of performing transactions, SQL databases are still the better bet.
+**Reliability or ACID Compliance**: The vast majority of relational databases are ACID compliant. When it comes to data reliability and safe guarantee of performing transactions, SQL databases are still the better bet.
 
 ### Which one to use?
 Reasons to use SQL database:
 1. If you have to ensure ACID compliance
 2. If your data is structured and unchanging
 
-Reasons to use NoSQL database
+Reasons to use NoSQL database:
 1. Storing large volumes of data
 2. If you want rapid development
 

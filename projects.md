@@ -4,12 +4,6 @@ title: My Projects and Works
 permalink: /projects/
 ---
 
-### 6. Arctery Bot
-
-You can select the specific Arcteryx items, colors and sizes you want to be notified of. Arcteryx bot sends you instant notifications as soon as new inventory of your tracking items arrives, so you can be the first to know and shop.
-
-[Landing page](https://www.arcteryx.fun/)
-
 ### 5. SMARTS
 
 SMARTS (Scalable Multi-Agent RL Training School) is a simulation platform for reinforcement learning and multi-agent research on autonomous driving. Its focus is on realistic and diverse interactions.

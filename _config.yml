@@ -10,6 +10,7 @@ baseurl: ""
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Google analytics
 google_analytics:

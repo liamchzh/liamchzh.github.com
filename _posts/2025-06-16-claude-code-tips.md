@@ -6,8 +6,6 @@ description: "This is a practical guide for using Claude Code, a command line to
 categories: [Tech]
 ---
 
-# Claude Code Tips
-
 ## Tips
 
 ### Work with GitHub CLI

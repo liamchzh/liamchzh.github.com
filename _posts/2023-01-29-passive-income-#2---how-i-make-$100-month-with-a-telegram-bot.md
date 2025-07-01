@@ -2,7 +2,7 @@
 date: 2023-01-29
 layout: post
 title: "Passive Income #2 - How I make $100 month with a Telegram bot"
-description: "这里是关于创造被动收入的第 2 篇文章。前一篇分享了如何在 Medium 上通过参加 Partner Program 来写文章来赚钱。这一篇将讨论一些利用 Telegram Bot 赚钱的方式，以及介绍我是如何开发和运营我的 Telegram Bot。刚刚过去的二月是一个里程碑，因为在这个月里..."
+description: "讨论一些利用 Telegram Bot 赚钱的方式，以及介绍我是如何开发和运营我的 Telegram Bot..."
 categories: [Newsletter]
 ---
 

@@ -2,7 +2,7 @@
 date: 2023-01-23
 layout: post
 title: "Patagonia  地球是我们唯一的股东"
-description: "在 Yvon Chouinard 开始实践做负责任的企业将近 50 年后，Patagonia 宣布了公司新的所有权。Chouinard 家族已将所有所有权转让给两个新实体：Patagonia Purpose Trust 和 Holdfast Collective。所有有表决权的股票（占总股份 ..."
+description: "在 Yvon Chouinard 开始实践做负责任的企业将近 50 年后，Patagonia 宣布了公司新的所有权。Chouinard 家族已将所有所有权转让给两个新实体：Patagonia Purpose Trust 和 Holdfast Collective..."
 categories: [Newsletter]
 ---
 

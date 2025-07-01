@@ -2,7 +2,7 @@
 date: 2023-01-18
 layout: post
 title: "Podcast - 听 Julie Zhuo 聊职场成长和产品设计"
-description: "Julie Zhuo - 前 Facebook 的设计 VP，作为第一批的嘉宾，被邀请到 Lenny’s Podcast 聊聊她的职业经历，以及分享关于写作和产品设计的经验。Lenny 问了很多问题，比如："
+description: "Julie Zhuo - 前 Facebook 的设计 VP，作为第一批的嘉宾，被邀请到 Lenny’s Podcast 聊聊她的职业经历，以及分享关于写作和产品设计的经验"
 categories: [Newsletter]
 ---
 

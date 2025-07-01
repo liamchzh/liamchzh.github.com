@@ -2,7 +2,7 @@
 date: 2023-01-20
 layout: post
 title: "Equity 201 - 关于 stock options，薪酬谈判时你需要知道什么"
-description: "之前在 Equity 101 的两篇文章分享什么是 stock options 以及如何行权才能最大化收益。"
+description: "这篇文章是作者 Julia Evans 的一段经历中关于期权的故事。Julia 用自己的故事，希望告诉大家在薪酬谈判的时候，一定要做的事情。"
 categories: [Newsletter]
 ---
 

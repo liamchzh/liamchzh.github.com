@@ -54,6 +54,13 @@ Claude Code has headless mode for non-interactive environments like CI, pre-comm
 - `claude commit`: Create a Git commit, co-authored by Claude
 - `claude -r`: Resume the previous conversation
 
+### Custom Slash Commands
+You can create your own slash commands as Markdown files to build reusable prompts:
+- **Project commands**: Store in `.claude/commands/` to share with your team
+- **Personal commands**: Store in `~/.claude/commands/` for personal use across projects
+- Use `$ARGUMENTS` placeholder for dynamic content, and reference files with `@` prefix
+- Example: Create `.claude/commands/optimize.md` with "Analyze this code for performance issues: $ARGUMENTS" and use with `/optimize myfile.js`
+
 ## Links
 
 - [Claude Code Best Practices](https://www.anthropic.com/engineering/claude-code-best-practices)

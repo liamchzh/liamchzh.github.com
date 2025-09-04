@@ -4,6 +4,12 @@ title: My Projects and Works
 permalink: /projects/
 ---
 
+### 6. Baby Gears Review
+
+A comprehensive review website for baby products and gear, helping parents make informed purchasing decisions.
+
+[Visit BabyGearsReview.com](https://babygearsreview.com/)
+
 ### 5. SMARTS
 
 SMARTS (Scalable Multi-Agent RL Training School) is a simulation platform for reinforcement learning and multi-agent research on autonomous driving. Its focus is on realistic and diverse interactions.
